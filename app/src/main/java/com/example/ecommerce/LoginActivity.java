@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +20,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.rey.material.widget.CheckBox;
 
 import io.paperdb.Paper;
 
@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         NotAdminLink = (TextView) findViewById(R.id.not_admin_panel_link);
         ForgetPasswordLink = findViewById(R.id.forget_password_link);
         loadingBar = new ProgressDialog(this);
-        chkBoxRememberMe = (CheckBox) findViewById(R.id.remember_me_chkb);
+        chkBoxRememberMe = findViewById(R.id.remember_me_chkb);
 
         Paper.init(this);
         LoginButton.setOnClickListener(new View.OnClickListener() {
